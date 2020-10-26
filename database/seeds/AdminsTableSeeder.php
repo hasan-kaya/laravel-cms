@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Admin;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Contracts\Permission;
+use Spatie\Permission\Contracts\Role;
 
 class AdminsTableSeeder extends Seeder
 {
@@ -17,5 +20,13 @@ class AdminsTableSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('123456'),
         ]);
+
+        DB::table('roles')->insert([
+            'name' => 'Super Admin',
+            'guard_name' => 'admin',
+        ]);
+
+        $user = Admin::find(1);
+        $user->assignRole('Super Admin');
     }
 }
