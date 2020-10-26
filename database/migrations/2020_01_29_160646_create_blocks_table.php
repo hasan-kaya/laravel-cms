@@ -19,11 +19,21 @@ class CreateBlocksTable extends Migration
             $table->string('model_name',30);
             $table->unsignedBigInteger('model_id');
             $table->string('type',50);
-            $table->longText('content')->nullable();
             $table->tinyInteger('status')->default(0)->unsigned();
             $table->integer('rank')->default(0)->unsigned();
 
             $table->timestamps();
+        });
+
+        Schema::create('block_translations', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('block_id');
+            $table->string('locale')->index();
+    
+            $table->longText('content')->nullable();
+    
+            $table->unique(['block_id', 'locale']);
+            $table->foreign('block_id')->references('id')->on('blocks')->onDelete('cascade');
         });
     }
 

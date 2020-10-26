@@ -44,7 +44,7 @@ Options +FollowSymLinks
     RewriteCond %{REQUEST_FILENAME} !-d 
     RewriteCond %{REQUEST_FILENAME} !-f 
     RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^storage/(.*)/(.*)$ public/storage/$1/$2 [L,NC] 
+    RewriteRule ^storage/(.*)/(.*)$ storage/app/public/$1/$2 [L,NC] 
 
     RewriteRule ^\.env$ - [R=404,L,NC]
 </IfModule> 
