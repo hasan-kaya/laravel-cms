@@ -28,6 +28,7 @@ Run the command below to initialize. Do not forget to configure your .env file.
 
     $ php artisan migrate
     $ php artisan db:seed --class=AdminsTableSeeder
+    ( or you can import db.sql for example content )
     $ php artisan key:generate
 
 Admin Panel Credentials
