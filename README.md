@@ -15,6 +15,7 @@ Laravel simple CMS with multi-language support
   * Role based permission system for admins
   * Homepage Builder
   * Multilingual
+  * Sitemap Generator
 -----
 <a name="item2"></a>
 ## Installation Guide:

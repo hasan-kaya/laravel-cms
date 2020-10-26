@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 8.0.21)
 # Database: site
-# Generation Time: 2020-10-26 11:03:11 +0000
+# Generation Time: 2020-10-26 13:06:14 +0000
 # ************************************************************
 
 
@@ -86,6 +86,35 @@ VALUES
 	(1,'admin','admin','admin@admin.com','$2y$10$PjWFIJMrKHwNkb05Em8FCuYg7HgOSdCH4AITXXOMlow7EMzK7LgAi',NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table block_translations
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `block_translations`;
+
+CREATE TABLE `block_translations` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `locale` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text COLLATE utf8mb4_unicode_ci,
+  `block_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+LOCK TABLES `block_translations` WRITE;
+/*!40000 ALTER TABLE `block_translations` DISABLE KEYS */;
+
+INSERT INTO `block_translations` (`id`, `locale`, `content`, `block_id`)
+VALUES
+	(1,'tr','<h4 class=\"sub_title\">çalışmalar</h4>\r\n<h2 class=\"sec_title\">yaptığımız işler</h2>\r\n<p class=\"sec_desc\">\r\nLorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.<br>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.\r\n</p>',4),
+	(2,'en','<h4 class=\"sub_title\">our portfolio</h4>\r\n<h2 class=\"sec_title\">work showcase</h2>\r\n<p class=\"sec_desc\">\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s\r\n</p>',4),
+	(3,'tr','<h4 class=\"sub_title\">referanslarımız</h4>\r\n<h2 class=\"sec_title\">bizimle çalışanlar</h2>\r\n<p class=\"sec_desc\"> Çalışanlarımıza en iyi eğitimi sunarken, <br>müşterilerimize olağanüstü hizmet sunmayı taahhüt ediyoruz. </p>',5),
+	(4,'en','<h4 class=\"sub_title\">our clients</h4>\r\n<h2 class=\"sec_title\">they trust us</h2>\r\n<p class=\"sec_desc\"> We are committed to providing our customers with exceptional service while<br>offering our employees the best training. </p>',5),
+	(5,'en','<h4 class=\"sub_title\">our news & articles</h4>\r\n<h2 class=\"sec_title\">latest blog posts</h2>\r\n<p class=\"sec_desc\"> We are committed to providing our customers with exceptional service while<br>offering our employees the best training.</p>',6),
+	(6,'tr','<h4 class=\"sub_title\">haberlerimiz ve makalelerimiz</h4>\r\n<h2 class=\"sec_title\">son blog gönderileri</h2>\r\n<p class=\"sec_desc\"> Çalışanlarımıza en iyi eğitimi sunarken, <br>müşterilerimize olağanüstü hizmet sunmayı taahhüt ediyoruz..</p>',6);
+
+/*!40000 ALTER TABLE `block_translations` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
