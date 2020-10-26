@@ -1,0 +1,960 @@
+/*
+Theme Name: Meipaly
+Theme URI: http://layerdrops.com/
+Author: Layerdrops
+Author URI: http://layerdrops.com/
+Description: Meipaly - Fine One Page Parallax HTML5 Responsive Template
+Version: 1.0
+License:
+License URI:
+*/
+
+/*=======================================================================
+ [Table of contents]
+=========================================================================
+1. Mobile Responsive
+    a. Mobile Responsive 2
+2. Small Device
+3. Responsive For Small Device
+4. Responsive For large Device
+
+*/
+/*------------------------------------------------------------------------------------
+/ 1. Mobile Responsive. Responsive For Extra Small Device like: Mobile, Iphone etc
+--------------------------------------------------------------------------------------*/
+@media (min-width: 320px) and (max-width: 767px){
+    .mainmenu{
+        padding: 0;
+        margin: 0 -15px;
+    }
+    .mainmenu > ul {
+        text-align: center;
+        display: none;
+        position: absolute;
+        z-index: 10;
+        background: #000;
+        left: 0;
+        top: -2px;
+        padding: 30px 15px 20px;
+        height: 300px;
+        width: 100%;
+        overflow-y: scroll;
+        border-top: 1px solid rgba(255, 255, 255, .10);
+    }
+    .mainmenu ul li{
+        display: block;
+        padding: 0 0 32px;
+    }
+    .mainmenu ul li a{
+        display: inline-block;
+    }
+    .mainmenu > ul > li.menu-item-has-children > a:before {
+        position: absolute;
+        right: -18px;
+        top: 2px;
+        content: "\f107";
+        transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        font-family: 'fontAwesome';
+        font-size: 12px;
+        color: #fff;
+        line-height: .8;
+    }
+    .black_color .mainmenu ul ul.sub-menu,
+    .mainmenu ul ul.sub-menu{
+        top: 20px;
+        display: none;
+        width: 100%;
+        padding: 0;
+        visibility: visible;
+        opacity: 1;
+        left: auto;
+        margin: auto;
+        position: relative;
+        right: auto;
+        text-align: center;
+        transform: none;
+        z-index: 2;
+        transition: none;
+        padding: 15px 0 2px;
+    }
+    .mainmenu ul ul.sub-menu:before{
+        border-bottom: none;
+        border-top: 5px solid rgba(255, 255, 255, 0.98);
+        transition: none;
+    }
+    .black_color .mainmenu ul li:hover ul.sub-menu,
+    .mainmenu ul li:hover ul.sub-menu {
+        visibility: visible;
+        opacity: 1;
+        top: 20px;
+    }
+
+    .mainmenu > ul > li.menu-item-has-children > a:hover:before, 
+    .mainmenu > ul > li.menu-item-has-children.active > a:before{
+        transform: rotate(-180deg);
+        color: #fff;
+    }
+    .mainmenu > ul > li.active > a:after{
+        width: 100%;
+    }
+    .black_color .mainmenu ul li a{
+        color: #fff;
+    }
+    .black_color .mainmenu ul ul.sub-menu{
+        background: transparent;
+        box-shadow: none;
+    }
+    .black_color .mainmenu ul li.active a,
+    .black_color .mainmenu ul li a:hover{
+        color: #fff;
+    }
+    .black_color .mainmenu ul li.active a:after,
+    .black_color .mainmenu ul li a:after{
+        background: #fff;
+    }
+
+    .header_01{
+        padding: 39px 0 0;
+    }
+    .navigator{
+        padding-top: 0;
+        margin-top: -72px;
+    }
+    .navigator a.search {
+        margin-right: 10px;
+    }
+    .close-popup {
+        top: 20px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    .close-popup:after, .close-popup:before {
+        right: 13px;
+        top: 19px;
+    }
+    .container.mobileContainer {
+        width: 100%;
+    }
+    .logo2 {
+        left: 15px;
+        top: 20px;
+    }
+    .dl-menu__wrap ul li{
+        margin: 5px 0;
+    }
+    .dl-menu__wrap ul li a{
+        font-size: 14px;
+    }
+    .footer__contacts{
+        text-align: center;
+        padding: 0 5px;
+        bottom: 55px;
+        left: 0;
+        right: 0;
+    }
+    .footer__contacts li{
+        font-size: 13px;
+        margin: 0;
+    }
+    .popUp_social{
+        text-align: center;
+        text-align: center;
+        right: 0;
+        left: 0;
+        bottom: 15px;
+    }
+    .popUp_social ul li{
+        margin-right: 10px;
+    }
+    .popUp_social ul li a{
+        font-size: 13px;
+    }
+    .popUp_social ul li a i{
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    .searchForms button[type="submit"]{
+        width: 40px;
+        font-size: 15px;
+    }
+    .searchForms input{
+        font-size: 15px;
+        height: 70px;
+    }
+    .rev_slider .tp-leftarrow.me_arrows, 
+    .rev_slider .tp-rightarrow.me_arrows{
+        width: 40px;
+        height: 40px;
+        padding: 10px 0;
+    }
+    .rev_slider .tp-leftarrow.me_arrows{
+        left: -50px !important;
+    }
+    .rev_slider .tp-rightarrow.me_arrows{
+        right: -90px !important;
+        left: auto !important;
+    }
+    .sec_title{
+        font-size: 34px;
+        letter-spacing: 1px;
+        line-height: 50px;
+    }
+    .sec_title br{
+        display: none;
+    }
+    .sec_desc br{
+        display: none;
+    }
+    .custom_column .col-lg-3{
+        width: 100%;
+    }
+    .icon_box_1{
+        margin-bottom: 30px;
+    }
+    .PR_79{
+        padding-right: 15px;
+        text-align: center;
+    }
+    .ab_img1{
+        position: relative;
+        margin: 50px 0 0;
+    }
+    .ab_img2{
+        position: relative;
+        top: 30px;
+    }
+    .ab_img2:after{
+        display: none;
+    }
+    .ab_img2 img,
+    .ab_img1 img{
+        width: 100%;
+    }
+    .videoWrap{
+        margin-bottom: 50px;
+    }
+    .play_video a.video_popup{
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+    .play_video h2{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .subscribefrom{
+        text-align: left;
+    }
+    .subscribefrom input[type="email"]{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .subscribefrom .common_btn.red_bg{
+        margin-left: 0;
+    }
+    .BR{
+        border-right: none;
+    }
+    .CL_content img{
+        width: 100%;
+    }
+    .abc_inner{
+        margin-top: 0;
+    }
+    .abci_content{
+        margin-left: 0;
+        padding: 50px 0 0;
+    }
+    .abci_content h2{
+        font-size: 36px;
+        letter-spacing: 1px;
+        line-height: 50px;
+    }
+    .team_slider .slick-slide{
+        margin: 0 10px;
+    }
+    .singleTM:hover .tm_overlay a.common_btn,
+    .singleTM:hover .team_social{
+        left: 40px;
+    }
+    .testimonial_content{
+        padding: 0;
+    }
+    .testimonial_content h2{
+        font-size: 36px;
+        letter-spacing: 1px;
+        line-height: 50px;
+    }
+    .testimonial_content p br{
+        display: none;
+    }
+    .lbi_details{
+        padding: 30px 10px 0;
+    }
+    .lbi_details h2{
+        font-size: 22px;
+    }
+    .ready_2 .common_btn,
+    .ready .common_btn{
+        float: left;
+        margin-top: 30px;
+    }
+    .footer_1 .aboutwidget{
+        padding-right: 0;
+        margin-top: 0;
+    }
+    .footer_1 .widget{
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+    .footer_1 .contact_widgets p:first-of-type {
+        margin-bottom: 15px;
+    }
+    .footer_1 .widget.social_widget{
+        padding-bottom: 80px;
+    }
+    .icon_box_2{
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .features_content{
+        padding-right: 0;
+    }
+    .singleFeature:last-child {
+        margin-bottom: 56px;
+    }
+    .features_img{
+        padding-right: 15px;
+    }
+    .features_img img{
+        width: 100%;
+    }
+    .img_details{
+        padding: 15px;
+    }
+    .img_details h4{
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    .dots_owl{
+        right: 30px;
+    }
+    .testimoniTab ul li a .author_detail h5{
+        line-height: 22px;
+    }
+    .testi_con{
+        padding-top: 100px;
+    }
+    .chooseUs_title li{
+        width: 100%;
+    }
+    .chooseUs_title li a{
+        padding: 32px 0;
+        font-size: 18px;
+    }
+    .wh_choose ul li{
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .single_wedo{
+        margin-bottom: 30px;
+    }
+    .gmap{
+        height: 300px;
+    }
+    .btn_link a{
+        height: 100px;
+        padding: 41px 0;
+        font-size: 20px;
+    }
+    .singleClient_2{
+        margin-bottom: 30px;
+    }
+    .banner_content h2{
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .serviceArea h2{
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    .serviceArea h3{
+        margin-bottom: 30px;
+        line-height: 1.2;
+    }
+    .serviceArea ul{
+        margin: 0 0 30px;
+    }
+    .sidebar{
+        margin-top: 50px;
+    }
+    .sidebar .widget_title{
+        padding-left: 28px;
+    }
+    .meipaly_services_help,
+    .meipaly_post_widget,
+    .meipaly_tagcloude_widget,
+    .meipaly_categorie_widget{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .folio_mixing{
+        margin-bottom: 50px;
+    }
+    .folio_mixing ul li{
+        margin-bottom: 20px;
+    }
+    .custom .mix{
+        width: 100%;
+    }
+    .blog_headings{
+        padding: 30px 10px 0;
+    }
+    .blog_headings h2{
+        font-size: 30px;
+    }
+    .blog_headings .blog_metas a{
+        margin: 0 5px;
+    }
+    .blog_details{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .post_author{
+        padding-left: 20px;
+        padding-right: 15px;
+        padding-top: 150px;
+    }
+    .post_author img{
+        width: 100px;
+        height: 110px;
+        left: 20px;
+        right: auto;
+        top: 20px;
+        bottom: auto;
+    }
+    .post_author h3{
+        margin-bottom: 20px;
+    }
+    .single-comment img{
+        width: 75px;
+        height: 80px;
+    }
+    .single-comment{
+        padding-left: 85px;
+        padding-right: 0;
+        padding-bottom: 100px;
+    }
+    .single-comment .common_btn.red_bg{
+        left: 85px;
+        right: auto;
+        bottom: 30px;
+        top: auto;
+    }
+    .single-comment .authorDetails span{
+        margin-bottom: 10px;
+    }
+    .sidebar .widget form.searchform input{
+        padding: 0 30px;
+    }
+    .mpw_item a{
+        font-size: 15px;
+    }
+    .agency_img1{
+        margin-top: 45px;
+    }
+    .agency_img2{
+        margin: 30px 0 40px;
+    }
+    .agency_img1:after{
+        display: none;
+    }
+    .compay_date{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+    .videoWrap_2{
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .ab_detail_wrap{
+        padding: 0;
+        text-align: center;
+    }
+
+
+
+    .showit{
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+/*------------------------------------------------------------------------------------
+/ 1.a. Mobile Responsive 2.
+--------------------------------------------------------------------------------------*/
+@media (min-width: 481px) and (max-width: 767px){
+    .rev_slider .tp-leftarrow.me_arrows, 
+    .rev_slider .tp-rightarrow.me_arrows{
+        width: 50px;
+        height: 48px;
+        padding: 14px 0;
+    }
+    .subscribefrom input[type="email"]{
+        width: 470px;
+    }
+    .banner_content h2{
+        font-size: 44px;
+    }
+}
+
+/*----------------------------------------------
+/ 2. Responsive For Small Device.  like: Tab
+-----------------------------------------------*/
+@media (min-width: 768px) and (max-width: 990px){
+    .rev_slider .tp-leftarrow.me_arrows, 
+    .rev_slider .tp-rightarrow.me_arrows{
+        width: 60px;
+        height: 60px;
+        padding: 19px 0;
+    }
+    .rev_slider .tp-leftarrow.me_arrows{
+        left: -35px !important;
+    }
+    .rev_slider .tp-rightarrow.me_arrows{
+        right: -95px !important;
+        left: auto !important;
+    }
+    .header_01{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mainmenu ul li{
+        padding: 0 12px 53px;
+    }
+    .mainmenu ul li:first-of-type{
+        padding-left: 0;
+    }
+    .mainmenu ul li:last-of-type{
+        padding-right: 0;
+    }
+    .mainmenu ul li a{
+        font-size: 14px;
+    }
+    .footer__contacts{
+        padding-left: 10px;
+    }
+    .logo2{
+        left: 20px;
+    }
+    .sec_title{
+        font-size: 40px;
+    }
+    .sec_title br{
+        display: none;
+    }
+    .custom_column .col-lg-3{
+        width: 33.33333333%;
+    }
+    .icon_box_2,
+    .icon_box_1{
+        margin-bottom: 30px;
+    }
+    .icon_box_2 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .front, .back{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .PR_79{
+        padding-right: 15px;
+    }
+    .MB_45{
+        margin-bottom: 30px;
+    }
+    .ab_img1{
+        position: relative;
+        float: right;
+        right: -5px;
+    }
+    .ab_img2:after{
+        width: 350px;
+        left: 15px;
+    }
+    .subscribefrom input[type="email"]{
+        width: 100%;
+    }
+    .subscribefrom .common_btn.red_bg{
+        margin-top: 15px;
+    }
+    .BR{
+        border: none;
+    }
+    .abci_content{
+        padding: 40px 0 0 20px;
+    }
+    .abci_content h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .abci_content p{
+        margin-bottom: 47px;
+    }
+    .testimonial_content{
+        padding: 0;
+    }
+    .testimonial_content h2{
+        font-size: 40px;
+        line-height: 56px;
+        letter-spacing: 1px;
+    }
+    .lbi_details{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer_1 .aboutwidget{
+        padding-right: 0;
+    }
+    .footer_1 .contact_widgets{
+        padding-left: 0;
+    }
+    .features_content{
+        padding-bottom: 50px;
+        padding-right: 100px;
+    }
+    .features_img img{
+        width: 100%;
+    }
+    .chooseUs_title li a{
+        font-size: 16px;
+        padding: 40px 0;
+    }
+    .singleClient_2,
+    .single_wedo{
+        margin-bottom: 30px;
+    }
+    .gmap{
+        height: 450px;
+    }
+    .btn_link a{
+        font-size: 22px;
+        height: 120px;
+        padding: 51px 0;
+    }
+    .banner_content h2{
+        font-size: 60px;
+    }
+    .sidebar .widget_title{
+        padding-left: 13px;
+    }
+    .meipaly_services_help,
+    .meipaly_post_widget,
+    .meipaly_tagcloude_widget,
+    .meipaly_categorie_widget{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .sidebar .widget form.searchform input{
+        padding: 0 15px;
+        height: 70px;
+    }
+    .mpw_item{
+        padding-left: 70px;
+    }
+    .mpw_item a{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    .serviceArea ul,
+    .serviceArea h3{
+        margin-bottom: 30px;
+    }
+    .singlePortfoio_content h3{
+        margin-bottom: 20px;
+    }
+    .singlePortfoio_content{
+        margin-bottom: 28px;
+    }
+    .nextprevPagination{
+        padding: 35px 0;
+    }
+    .blog_headings{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .blog_headings h2{
+        font-size: 32px;
+    }
+    .blog_details {
+        padding: 0px 25px 22px;
+    }
+    .post_author{
+        padding-left: 150px;
+        padding-right: 15px;
+    }
+    .post_author img{
+        left: 15px;
+        width: 120px;
+        height: 140px;
+        top: -10px;
+    }
+    .post_author h3{
+        margin-bottom: 10px;
+    }
+    .post_author p{
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 30px;
+    }
+    .single-comment{
+        padding-left: 127px;
+        padding-right: 80px;
+    }
+    .single-comment .authorDetails span{
+        margin-bottom: 15px;
+    }
+    .agency_img2{
+        margin-top: -20px;
+        margin-right: 180px;
+    }
+    .agency_img1:after{
+        width: 380px;
+        height: 400px;
+        top: 30px;
+        right: 30px;
+    }
+    .compay_date{
+        right: 15px;
+        bottom: 0;
+    }
+    .compay_date h2{
+        font-size: 70px;
+    }
+    .ab_detail_wrap{
+        padding: 0;
+    }
+    .ab_detail_wrap .sec_title{
+        margin-bottom: 20px;
+        line-height: 50px;
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+    .videoWrap_2 .play_video h2{
+        font-size: 36px;
+    }
+    .videoWrap_2 .play_video a.video_popup{
+        width: 80px;
+        height: 80px;
+        padding: 27px 0;
+        font-size: 25px;
+    }
+    .ab_detail_wrap .sec_desc{
+        line-height: 32px;
+    }
+    .testimoniTab .sec_title{
+        font-size: 34px;
+    }
+    .testimoniTab ul li a .author_detail h5{
+        line-height: 22px;
+    }
+    .testi_con p{
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+}
+
+/*-------------------------------------------------------------------------
+/ 3. Responsive For Medium Device. like: Desktop with 1024px resolution
+----------------------------------------------------------------------------*/
+@media (min-width: 991px) and (max-width: 1199px){
+    .rev_slider .tp-leftarrow.me_arrows, 
+    .rev_slider .tp-rightarrow.me_arrows{
+        width: 60px;
+        height: 60px;
+        padding: 19px 0;
+    }
+    .rev_slider .tp-leftarrow.me_arrows{
+        left: -40px !important;
+    }
+    .rev_slider .tp-rightarrow.me_arrows{
+        right: -100px !important;
+        left: auto !important;
+    }
+    .header_01{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mainmenu ul li:first-of-type{
+        padding-left: 0;
+    }
+    .mainmenu ul li:last-of-type{
+        padding-right: 0;
+    }
+    .PR_79{
+        padding-right: 15px;
+    }
+    .ab_img2:after{
+        width: 100%;
+        left: 20px;
+    }
+    .front, .back{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .abci_content h2,
+    .sec_title{
+        font-size: 44px;
+    }
+    .subscribefrom input[type="email"]{
+        width: 390px;
+    }
+    .abci_content{
+        padding-left: 70px;
+        padding-top: 55px;
+    }
+    .testimonial_content{
+        padding: 0;
+    }
+    .lbi_details{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .lbi_details h2{
+        font-size: 22px;
+    }
+    .ready_2 .common_btn,
+    .ready .common_btn {
+        padding: 28px 38.5px;
+    }
+    .footer_1 .aboutwidget{
+        padding-right: 0;
+    }
+    .footer_1 .contact_widgets{
+        padding-left: 0;
+    }
+    .icon_box_2{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .features_content{
+        padding-right: 0;
+    }
+    .features_img img{
+        width: 100%;
+    }
+    .img_details{
+        padding: 20px 40px 20px 25px;
+    }
+    .img_details h4{
+        font-size: 18px;
+    }
+    .singleFeature{
+        margin-bottom: 32px;
+    }
+    .gmap{
+        height: 500px;
+    }
+    .singleClient_2{
+        padding-left: 30px;
+    }
+    .sidebar .widget_title{
+        padding-left: 28px;
+    }
+    .meipaly_services_help,
+    .meipaly_post_widget,
+    .meipaly_tagcloude_widget,
+    .meipaly_categorie_widget{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .sidebar .widget form.searchform input{
+        padding: 0 30px;
+    }
+    .serviceArea h3{
+        margin-bottom: 20px;
+    }
+    .serviceArea ul{
+        margin-top: -25px;
+    }
+    .blog_headings{
+        padding: 30px 20px 0;
+    }
+    .blog_details{
+        padding: 0 30px 22px; 
+    }
+    .blog_headings h2{
+        font-size: 36px;
+    }
+    .post_author{
+        padding-left: 250px;
+        padding-right: 30px;
+    }
+    .post_author img{
+        left: 50px;
+    }
+    .agency_img1:after{
+        width: 450px;
+    }
+    .agency_img2{
+        margin-top: -160px;
+        margin-right: 140px;
+    }
+    .compay_date{
+        right: 10px;
+        bottom: 0;
+    }
+    .compay_date h2{
+        font-size: 60px;
+        letter-spacing: 2px;
+    }
+    .ab_detail_wrap{
+        padding: 0;
+    }
+    .ab_detail_wrap .sec_title{
+        margin-bottom: 25px;
+        font-size: 40px;
+    }
+    .ab_detail_wrap .sec_desc{
+        line-height: 32px;
+    }
+    .videoWrap_2 .play_video h2{
+        font-size: 40px;
+    }
+}
+/*---------------------------------------------------------------------------------------------------------
+/ 4. Responsive For large Device. like: laptop and other large screen those have minimum 1200px resolution
+-----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 1200px) and (max-width: 1600px){
+    .rev_slider .tp-caption.layer_1{
+        top: 30px !important;
+    }
+    .rev_slider .tp-caption.layer_2{
+        font-size: 70px !important;
+        line-height: 80px !important;
+    }
+    .rev_slider .tp-caption.layer_3{
+        bottom: 54px !important;
+    }
+    .rev_slider.slider_2 .tp-caption.layer_1,
+    .rev_slider.slider_2 .tp-caption.layer_2,
+    .rev_slider.slider_2 .tp-caption.layer_3{
+        left: 80px !important;
+    }
+    .rev_slider.slider_2 .tp-caption.layer_1{
+        top: 45px !important;
+    }
+    .rev_slider.slider_2 .tp-caption.layer_3{
+        bottom: 78px !important;
+    }
+}

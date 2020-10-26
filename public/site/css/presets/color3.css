@@ -1,0 +1,37 @@
+/*=============================================
+/ PRIMARY COLOR 
+/=============================================*/
+/**---- Background HEX ----**/
+.back, .play_video a.video_popup, .singleClient:after, .singleClient_2:after, .lbi_details .lbid_date:hover, .icon_box_2:after, .img_details, .testimoniTab ul li a span:after, .btn_link a,
+.btn_link.bg_black a:hover, .singlePortfoio_content ul li a:after, .meipaly_paginations a:after, .meipaly_paginations span:after, .blog_headings span.blog_date, .post_author > a:after,
+.sfCloser:hover:after, .sfCloser:hover:before, .close-popup:hover:after, .close-popup:hover:before, .showit, .common_btn.red_bg:after, .testimonial_content .testi_icon, 
+.lbi_details .learnM:after
+{
+    background: #7bbd46;
+}
+.singlefolio:after{
+    background: rgba(123, 189, 70, .8);
+}
+.single_wedo .overlay_wedo:after,
+.singleTM .tm_overlay:after{
+    background: rgba(123, 189, 70, .7);
+}
+.ready{
+    background: url(../../images/bg/4_2.jpg) no-repeat center center / cover;
+}
+
+/**---- Color Text ----**/
+.navigator a.active, .navigator a:hover, .black_color .navigator a.active, .black_color .navigator a:hover, .black_color .navigator a.active, .black_color .navigator a:hover,
+.singleTM:hover .detail_TM h5, .testimonial_content h2 span, .lbi_details h2 a:hover, .lbi_details .learnM:hover, .footer_1 .copyright a:hover, .footer_1 .contact_widgets p a:hover,
+.icon_box_2 a:hover, .wh_choose ul li i, .serviceArea ul li i, .nextprevPagination a:hover, .singlePortfoio_content p a:hover, .singlePortfoio_content ul li a:hover, .blog_headings .blog_metas a:hover,
+.post_author h3 a:hover, .post_author > a, .single-comment .authorDetails h5 a:hover, .single-comment .authorDetails span, .searchForms button[type="submit"]:hover,
+.color_settings .switch-btn.active, .color_settings .switch-btn:hover, .red_color
+{
+    color: #7bbd46;
+}
+
+/**---- Border Color ----**/
+.back, .ab_img2:after, .agency_img1:after, .input-form.reqError, input.input-form:focus, textarea.input-form:focus
+{
+    border-color: #7bbd46;
+}

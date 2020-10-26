@@ -1,0 +1,189 @@
+/*
+Theme Name: Meipaly
+Theme URI: http://layerdrops.com/
+Author: Layerdrops
+Author URI: http://layerdrops.com/
+Description: Meipaly - Fine One Page Parallax HTML5 Responsive Template
+Version: 1.0
+License:
+License URI:
+*/
+
+/*=======================================================================
+[Table of contents]
+=========================================================================
+
+1. Font Settings
+2. Typography Settings
+3. Section Title Settings
+4. Button Settings
+5. Section Settings
+*/
+
+/*------------------------------------------------------------------------------
+/ 1. Font Settings
+------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 32px;
+    color: #818181;
+    letter-spacing: 0.64px;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    transition: all ease 400ms;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+}
+
+/*------------------------------------------------------------------------------
+/ 2. Typography Settings
+------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5 h6{
+    color: #000000;
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    transition: all ease 400ms;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+}
+a:hover, a:focus{
+    text-decoration: none;
+    outline: 0;
+}
+a:focus{
+    color: #fff;
+}
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*------------------------------------------------------------------------------
+/ 3. Section Title Settings
+------------------------------------------------------------------------------*/
+.noPadding{
+    padding: 0;
+}
+.noPaddingRight{
+    padding-right: 0;
+}
+.noPaddingLeft{
+    padding-right: 0;
+}
+
+/*------------------------------------------------------------------------------
+/ 4. Button Settings
+------------------------------------------------------------------------------*/
+.common_btn{
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    background: #000000;
+    color: #fff;
+    height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 28px 45.5px;
+    display: inline-block;
+    line-height: .8;
+    letter-spacing: 1.6px;
+    position: relative;
+    outline: none;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.common_btn span {
+    position: relative;
+    z-index: 2;
+}
+.common_btn:after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+.common_btn:hover:after{
+    width: 100%;
+}
+.common_btn:hover{
+    color: #000;
+}
+.common_btn.red_bg{
+    padding: 28px 40.5px;
+}
+.common_btn.red_bg:after{
+    background: #e62b4a;
+}
+.common_btn.red_bg:hover:after{
+    width: 100%;
+}
+.common_btn.red_bg:hover{
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------------
+/ 5. Section Settings
+------------------------------------------------------------------------------*/
+.commonSection{
+    padding: 120px 0;
+    position: relative;
+}
+.commonSection .container{
+    position: relative;
+    z-index: 2;
+}
+.grays{
+    background: #f5f6fa;
+}
+.sub_title{
+    font-size: 12px;
+    line-height: .8;
+    font-weight: 400;
+    color: #818181;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+.sec_title{
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 25px;
+}
+.red_color{
+    color: #e62b4a;
+}
+.white{
+    color: #ffffff;
+}
+.sec_desc{
+    margin: 0 0 54px;
+}
+.color_aaa{
+    color: #aaaaaa;
+}

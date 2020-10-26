@@ -1,0 +1,50 @@
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+ <FilesMatch "\.(json|pdf|swf|bmp|gif|jpeg|jpg|png|svg|tiff|ico|flv|js)$">
+  Header unset Last-Modified
+ </FilesMatch>
+</IfModule>
+
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+    RewriteEngine On 
+
+    RewriteCond %{REQUEST_URI} !^
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteRule ^(.*)/$ /$1 [L,R=301] 
+
+    RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.ico|\.jpg|\.jpeg|\.gif|\.eot|\.svg|\.ttf|\.woff|\.woff2|robots\.txt)$ [NC] 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteRule ^ index.php [L] 
+
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)/(css|js|images|fonts)/(.*)$ public/$1/$2/$3 [L,NC] 
+
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^storage/(.*)/(.*)$ public/storage/$1/$2 [L,NC] 
+
+    RewriteRule ^\.env$ - [R=404,L,NC]
+</IfModule> 
