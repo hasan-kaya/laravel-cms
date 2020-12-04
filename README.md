@@ -22,7 +22,7 @@ Laravel simple CMS with multi-language support
 
 Clone this repository and install the dependencies.
 
-    $ git clone github.com/hasan-kaya/laravel-cms.git && cd laravel-cms
+    $ git clone https://github.com/hasan-kaya/laravel-cms.git && cd laravel-cms
     $ composer install
 
 Run the command below to initialize. Do not forget to configure your .env file. 
